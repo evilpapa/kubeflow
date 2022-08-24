@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1eede69e18c5ac9c0b0295b72cabb7e64e029e74" datatype="html">
+        <source>隐藏</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/advanced-options/advanced-options.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6358767024326715915" datatype="html">
+        <source>高级选项</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/advanced-options/advanced-options.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>名称</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/name-namespace-inputs/name-input/name-input.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-name/form-name.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="130fd872c78271a8f86b1ab16a76e823969c47d9" datatype="html">
+        <source>空间</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/name-namespace-inputs/name-namespace-inputs.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/name-namespace-inputs/name-namespace-inputs.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7824eb0fc97826f3919ba20317db1f8fb7926fcf" datatype="html">
+        <source> Cannot be negative. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/positive-number-input/positive-number-input.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6259832288014753417" datatype="html">
+        <source>Name must consist of lowercase alphanumeric characters or &apos;-&apos;,
+    start with an alphabetic character, and end with an alphanumeric character.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/validators.ts</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="824282508845786476" datatype="html">
+        <source>名称过长</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/validators.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5302945586275093972" datatype="html">
+        <source>名称不能为空</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/form/validators.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2061ce2524f31b7754bd310c6b0ad194b563767c" datatype="html">
+        <source>选择空间</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/namespace-select/namespace-select.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3862207452684082108" datatype="html">
+        <source>发生错误： <x id="PH" equiv-text="error"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/services/backend/backend.service.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1292256390007124036" datatype="html">
+        <source>客户端错误： <x id="PH" equiv-text="error.error.message"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/services/backend/backend.service.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8194451610848887333" datatype="html">
+        <source>无法链接到后端。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/services/backend/backend.service.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4553983244211420347" datatype="html">
+        <source>发生位置异常。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/services/backend/backend.service.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0c0be57aaf30414531e79157a45e0fc3fd6b637b" datatype="html">
+        <source>DISMISS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/kubeflow/src/lib/snack-bar/component/snack-bar.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ac184ad5119488375c501e04e46b79dbb6079cc7" datatype="html">
+        <source>其他设置</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-advanced-options/form-advanced-options.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aa98eb3757f779bf6bce68192b5c93831570c9ea" datatype="html">
+        <source>其他可能应用于 notebook 的设置。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-advanced-options/form-advanced-options.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4f9350429574d4118ef3709016039f34a0785466" datatype="html">
+        <source> 开启内存分享 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-advanced-options/form-advanced-options.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e0a31a4739749d022f9c0265ef0db1779daf3bad" datatype="html">
+        <source>亲和 / 容忍性</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-affinity-tolerations/form-affinity-tolerations.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d3f8def051f09bcd2b129a7cd61bb993fe206bce" datatype="html">
+        <source>配置 Notebook 的亲和 / 容忍性</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-affinity-tolerations/form-affinity-tolerations.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="633ab3500af3e54a7519377f4b6e5bc100737123" datatype="html">
+        <source> 亲和性配置 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-affinity-tolerations/form-affinity-tolerations.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a2f14a73f7a6e94479f67423cc51102da8d6f524" datatype="html">
+        <source>无</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-affinity-tolerations/form-affinity-tolerations.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-affinity-tolerations/form-affinity-tolerations.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-gpus/form-gpus.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">option None</note>
+      </trans-unit>
+      <trans-unit id="26316693d7df543784a554fb79d00771f79a2865" datatype="html">
+        <source> 容忍性组 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-affinity-tolerations/form-affinity-tolerations.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edd04e579025543c017d80558217d1e2788708df" datatype="html">
+        <source>配置</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-configurations/form-configurations.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="63220bf4b545f3ca1f7b5215f1953b95dc3645e0" datatype="html">
+        <source>应用于新 notebook 的额外配置层。
+        （比如：插入认证信息作为 secrets，并设置为环境变量）</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-configurations/form-configurations.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a76f7ebd6eb4f4afd7109e574dc617f858cd2d80" datatype="html">
+        <source> 配置 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-configurations/form-configurations.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f22f0cf2e9846ef910c72864e8d5b62b36b81c86" datatype="html">
+        <source>CPU / RAM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-cpu-ram/form-cpu-ram.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Title for the CPU/RAM form section</note>
+      </trans-unit>
+      <trans-unit id="6af244dea6f7d8f929b45cd8226522d0e35d7110" datatype="html">
+        <source>指定 Notebook 服务需要保留的 CPU 和 内存总量。
+         对于 CPU 负载型，可以选择多于 1 个 CPU，比如 1.5。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-cpu-ram/form-cpu-ram.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">CPU/RAM 表单文本</note>
+      </trans-unit>
+      <trans-unit id="01817bd08ce56cd2966da83498f862a5c3984cc8" datatype="html">
+        <source>请求的 CPU 总数</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-cpu-ram/form-cpu-ram.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c35a751936ff43637e90b7a97c69939364e32a2f" datatype="html">
+        <source>请求的内存总数（Gi）</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-cpu-ram/form-cpu-ram.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b236d0d38ab7c46409b041002e008f28ade48e54" datatype="html">
+        <source>CPU 限制</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-cpu-ram/form-cpu-ram.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="393e204f9358a7b2bb54c23a1dd6fda2d3a20fe0" datatype="html">
+        <source> 内存限制（Gi）</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-cpu-ram/form-cpu-ram.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cbe5b11222992396a96e6d3d8ba3e9af4cbbdd92" datatype="html">
+        <source>数据卷</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-data-volumes/form-data-volumes.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f586fa68fde13b574cf55682962b36884e507d21" datatype="html">
+        <source>为数据集配置挂载数据卷</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-data-volumes/form-data-volumes.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1d41bb5873bf9a2c9cfa0176d4637258953cad24" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>add<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> ADD VOLUME </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-data-volumes/form-data-volumes.component.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+        <note priority="1" from="description">Add data volume button text</note>
+      </trans-unit>
+      <trans-unit id="f90b91d2308a85dd1f7b6139f8822d7659e0e6f6" datatype="html">
+        <source> 加载 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-default.component.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ae582a9312e4bcbb32a62d84e47e6b1b73ffd06a" datatype="html">
+        <source> 取消 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-default.component.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7110584923376845969" datatype="html">
+        <source>没有设置默认的存储类，无法为 Notebook 创建新的磁盘。请使用已存在的磁盘。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-default.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="126c1d5ce9129e10a0328764227f045806ab0e50" datatype="html">
+        <source>GPU</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-gpus/form-gpus.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9e62d063b88fdd89761c29f791e7655ce93e0aef" datatype="html">
+        <source>为 Notebook 服务容器指定 GPU 型号和数量。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-gpus/form-gpus.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6bc1c2ef4d2045c6f6a152e10bb00365a381c804" datatype="html">
+        <source>GPU 数量</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-gpus/form-gpus.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f49d3e9fe3286f0f5d07d5323db3cd6333331489" datatype="html">
+        <source>GPU 型号</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-gpus/form-gpus.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2704250739785727999" datatype="html">
+        <source>集群未找到 <x id="PH" equiv-text="vendor.uiName"/> GPU </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-gpus/form-gpus.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6063824952991640049" datatype="html">
+        <source>需要给分配的 GPU 指定型号</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-gpus/form-gpus.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a5f9ba9bb9faa8284bcadb1cdbc6aaf969e9c4bb" datatype="html">
+        <source>镜像</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Image section of the form</note>
+      </trans-unit>
+      <trans-unit id="1e8059172dc79be0273478003dd2e2ae465fd41b" datatype="html">
+        <source>包含基础开发和基础 ML 包的 Jupyter Docker 镜像</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Text for the Image section of the form</note>
+      </trans-unit>
+      <trans-unit id="059242c0f52aaeff3ed373739d818de15acc9751" datatype="html">
+        <source> 自定义镜像 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1f35754236a77f283c76f144f8ca55a2590b2897" datatype="html">
+        <source>Docker 镜像</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="817830b30c16a82f008858d8f7a6d64e7826a2b2" datatype="html">
+        <source>请提供一个镜像</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2f0e016d5caf4e42f1b6f60dc9fe80e2b98f5287" datatype="html">
+        <source>自定义镜像</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d8aa5559daf4007f0eff2ea4e5ea28d1ac49e105" datatype="html">
+        <source>镜像拉取规则</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6408a210e22cb458fc925aad796666f5a1198662" datatype="html">
+        <source> 总是拉取 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+        <note priority="1" from="description">ImagePullPolicy: Always</note>
+      </trans-unit>
+      <trans-unit id="7a084ea40b1b4313d812cfc6c7f41333f5021c45" datatype="html">
+        <source> 不存在则拉取 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+        <note priority="1" from="description">ImagePullPolicy: IfNotPresent</note>
+      </trans-unit>
+      <trans-unit id="414e175f751673aebbcac9ac0ee64fb16c508e8d" datatype="html">
+        <source> 从不拉取 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-image/form-image.component.html</context>
+          <context context-type="linenumber">150,151</context>
+        </context-group>
+        <note priority="1" from="description">ImagePullPolicy: Never</note>
+      </trans-unit>
+      <trans-unit id="cee8a23f48b6c7ae06f53a349a12744d3f3d0096" datatype="html">
+        <source>请指定 Notebook Server 名称以及所属的空间。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-name/form-name.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5f02a6412cf09bf5dd273aeb77215ce0ef343716" datatype="html">
+        <source>工作空间卷</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-workspace-volume/form-workspace-volume.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="752dfb855b4c8a9210e3d24477995a2371eab64f" datatype="html">
+        <source>配置挂载到你工作空间的卷。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-workspace-volume/form-workspace-volume.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3fcd8eaf3f795a406ca8d2418b7c0251b5ba4f31" datatype="html">
+        <source> 不要在用户 home 下使用持久存储。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-workspace-volume/form-workspace-volume.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2959471737957986113" datatype="html">
+        <source>你的工作空间不是持久存储的，该存储下的数据会在 notebook 终止时销毁数据。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/form-workspace-volume/form-workspace-volume.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f61c6867295f3b53d23557021f2f4e0aa1d0b8fc" datatype="html">
+        <source>类型</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6aa0944e1e88f326f92278269c69175ca0b8683e" datatype="html">
+        <source> 新建 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="694e11ff8cc8b070c82c65b5eaa118b4e4f3f169" datatype="html">
+        <source> 已存在 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e1b3e1dca04b54d87b5a7ff9593676dacaf6dce0" datatype="html">
+        <source>Size in Gi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="37e10df2d9c0c25ef04ac112c9c9a7723e8efae0" datatype="html">
+        <source>类型</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3ecda4b04c618776ed92e6436ff5f0fc8a58b17a" datatype="html">
+        <source>读写一次</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="134b8b6d344324352f2e3c4c6cd37c0a69f13294" datatype="html">
+        <source> 只读多次 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b20b7812eb6056ee343b25ecc21dd87da6cc261" datatype="html">
+        <source>读写多次 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="145eca4aa8d12853efaf9a1e27004e3238232eff" datatype="html">
+        <source>挂载点</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/form/form-default/volume/volume.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3496981118988770473" datatype="html">
+        <source>确定要删除 notebook server? <x id="PH" equiv-text="name"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6971434231050877464" datatype="html">
+        <source>警告：notebook server 未使用持久存储时数据会丢失。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="841311519047609428" datatype="html">
+        <source>删除</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6943486270557756671" datatype="html">
+        <source>取消</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3271166475979376691" datatype="html">
+        <source>删除中...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2683684114180894925" datatype="html">
+        <source>确定停止当前 notebook server? <x id="PH" equiv-text="name"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1374919527500826150" datatype="html">
+        <source>警告：notebook server 未使用持久存储时数据会丢失。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2616985041535023317" datatype="html">
+        <source>停止</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3806796620052804699" datatype="html">
+        <source>正在停止。。。</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5114128994255248149" datatype="html">
+        <source>Notebooks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6503351501628765557" datatype="html">
+        <source>新建 NOTEBOOK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5611592591303869712" datatype="html">
+        <source>状态</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>名称</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8650499415827640724" datatype="html">
+        <source>类型</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1130652265542107236" datatype="html">
+        <source>存在时间</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3012906865384504293" datatype="html">
+        <source>镜像</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3840111939816305457" datatype="html">
+        <source>GPU</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4027647877328291519" datatype="html">
+        <source>CPU</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1548129644093494406" datatype="html">
+        <source>内存</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2823783345206414517" datatype="html">
+        <source>卷</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2074758921664227900" datatype="html">
+        <source>连接到 notebook server</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8966109024004058984" datatype="html">
+        <source>连接</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8453883859090217683" datatype="html">
+        <source>停止当前 notebook</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1580383878043741894" datatype="html">
+        <source>开启当前 notebook</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7490997651991943628" datatype="html">
+        <source>删除当前 notebook</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/config.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4872314094100927318" datatype="html">
+        <source>开始 Notebook &apos;<x id="PH" equiv-text="notebook.name"/>&apos;...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/index-default.component.ts</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9162667715823767475" datatype="html">
+        <source>停止 Notebook &apos;<x id="PH" equiv-text="notebook.name"/>&apos;...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/index/index-default/index-default.component.ts</context>
+          <context context-type="linenumber">202</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,5 +1,5 @@
-# Getting Started on GKE
+# GKE 入门
 
-Follow one of the guides
-[here](https://www.kubeflow.org/docs/gke/) based upon your requirements.
+根据你的要求参考
+[指引](https://www.kubeflow.org/docs/gke/)。
 

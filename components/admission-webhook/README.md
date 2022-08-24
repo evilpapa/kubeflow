@@ -1,4 +1,4 @@
-## Goal
+## 目标
 We need a way to inject common data (env vars, volumes) to pods (e.g. notebooks).
 See [issue](https://github.com/kubeflow/kubeflow/issues/2641).
 K8s has [PodPreset](https://v1-19.docs.kubernetes.io/docs/concepts/workloads/pods/podpreset/) resource with similar use-case, however it is in alpha. 
@@ -33,7 +33,7 @@ spec:
  - name: secret-volume
    secret:
     secretName: gcp-secret
-``` 
+```
 1.  Kubeflow components, which are in charge of creating pods (e.g., notebook controller) add some of available PodDefault labels to the pods when required.
 For Jupyter notebooks, for instance, Notebook UI asks users which PodDefault needs to be applied to the notebook pods (see [this issue](https://github.com/kubeflow/kubeflow/issues/2992)). 
 Notebook-controller, then, adds the corresponding PodDefault labels to Notebook pods.  
@@ -47,7 +47,7 @@ It then, mutates the Pod spec according to PodDefault's spec.
 For the above PodDefault, when a pod creation request comes which has the label `add-gcp-secret:"true"', it appends the volume and volumeMounts 
 to the pod as described in the PodDefault spec.
 
-## Webhook Configuration
+## Webhook 配置
 Define a [MutatingWebhookConfiguration](https://godoc.org/k8s.io/api/admissionregistration/v1beta1#MutatingWebhookConfiguration),
 for example:
 
@@ -76,11 +76,11 @@ This specifies
 1. call the webhook service `gcp-cred-webhook.default` at path `/add-cred` (see `clientConfig`)
 
 
-### Webhook implementation
+### Webhook 实现
 The webhook should be a server that can handle request coming from the configured path (`/add-cred` in the above).
 The request and response types are both [AdmissionReview](https://godoc.org/k8s.io/api/admission/v1beta1#AdmissionReview)
 
-## Reference
+## 参考
 1. [K8S PodPreset](https://v1-19.docs.kubernetes.io/docs/concepts/workloads/pods/podpreset/)
 1. https://github.com/jpeeler/podpreset-crd
 1. https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/

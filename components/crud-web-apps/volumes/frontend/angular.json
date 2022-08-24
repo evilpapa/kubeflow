@@ -16,7 +16,8 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "fr": "i18n/fr/messages.fr.xlf"
+          "fr": "i18n/fr/messages.fr.xlf",
+          "zh": "i18n/zh/messages.zh.xlf"
         }
       },
       "architect": {
@@ -29,8 +30,13 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
             "crossOrigin": "use-credentials",
             "vendorChunk": true,
@@ -42,7 +48,14 @@
           },
           "configurations": {
             "fr": {
-              "localize": ["fr"]
+              "localize": [
+                "fr"
+              ]
+            },
+            "zh": {
+              "localize": [
+                "zh"
+              ]
             },
             "rok": {
               "budgets": [
@@ -130,6 +143,10 @@
             "fr": {
               "browserTarget": "frontend:build:fr",
               "proxyConfig": "src/proxy.conf.json"
+            },
+            "zh": {
+              "browserTarget": "frontend:build:zh",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
@@ -146,20 +163,23 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         },
         "e2e": {
@@ -177,5 +197,9 @@
       }
     }
   },
-  "defaultProject": "frontend"
+  "defaultProject": "frontend",
+  "cli": {
+    "analytics": "46b0168b-8d00-4394-b908-ffe5126059b2",
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

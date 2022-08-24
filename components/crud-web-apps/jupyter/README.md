@@ -1,4 +1,4 @@
-# Jupyter web app
+# Jupyter web 应用
 
 This web app is responsible for allowing the user to manipulate the Jupyter Notebooks in their Kubeflow cluster. To achieve this it provides a user friendly way to handle the lifecycle of Notebook CRs.
 
@@ -32,9 +32,9 @@ with a [configmap](./manifests/base/configs/logos-configmap.yaml) to make it eas
 
 Requirements:
 * node 12.0.0
-* python 3.7
+* python 3.8
 
-### Frontend
+### 前端
 
 ```bash
 # build the common library
@@ -51,13 +51,13 @@ npm link kubeflow
 npm run build:watch
 ```
 
-### Backend
+### 后端
 ```bash
 # create a virtual env and install deps
 # https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 cd components/crud-web-apps/jupyter/backend
-python3.7 -m pip install --user virtualenv
-python3.7 -m venv web-apps-dev
+python3.8 -m pip install --user virtualenv
+python3.8 -m venv web-apps-dev
 source web-apps-dev/bin/activate
 
 # install the deps on the activated virtual env
@@ -84,7 +84,7 @@ languages under their respective locale folder, i.e. `i18n/fr/messages.fr.xfl`.
 Each language's folder, aside from English, should have a distinct and up to
 date OWNERs file that reflects the maintainers of that language.
 
-**Testing**
+**测试**
 
 You can run a different translation of the app, locally, by running
 ```bash

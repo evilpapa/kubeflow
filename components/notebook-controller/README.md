@@ -4,7 +4,7 @@ The controller allows users to create a custom resource "Notebook" (jupyter note
 We originally wrote the controller using jsonnet and metacontroller, but are migrating to golang and
 Kubebuilder here. See [discussion](https://github.com/kubeflow/kubeflow/issues/2269).
 
-## Spec
+## 规定
 
 The user needs to specify the PodSpec for the jupyter notebook.
 For example:
@@ -41,13 +41,13 @@ All other fields will be filled in with default value if not specified.
 
 
    
-## Commandline parameters
+## 命令行参数
 
 `metrics-addr`: The address the metric endpoint binds to. The default value is `:8080`.
 
 `enable-leader-election`: Enable leader election for controller manager. Enabling this will ensure there is only one active controller manager. The default value is `false`.
 
-## Implementation detail
+## 实现细节
 
 This part is WIP as we are still developing.
 
@@ -57,7 +57,7 @@ Under the hood, the controller creates a StatefulSet to run the notebook instanc
 
 [https://www.kubeflow.org/docs/about/contributing/](https://www.kubeflow.org/docs/about/contributing/)
 
-### Development Environment
+### 开发环境
 
 To develop on `notebook-controller`, your environment must have the following:
 

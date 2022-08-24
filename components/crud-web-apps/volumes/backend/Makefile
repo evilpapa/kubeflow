@@ -1,7 +1,7 @@
 SHELL=bash
 
 install-deps:
-	pushd ../../../py && \
+	pushd ../../../../py && \
 	pip install -e . && \
 	popd
 	pip install -r requirements.txt
@@ -16,6 +16,8 @@ run-rok:
 	gunicorn -w 3 --bind 0.0.0.0:5000 --access-logfile - entrypoint:app
 
 run-dev:
+	KUBERNETES_SERVICE_HOST=10.9.28.66 \
+	KUBERNETES_SERVICE_PORT=6443 \
 	UI_FLAVOR=default \
 	BACKEND_MODE=dev \
 	APP_PREFIX=/ \

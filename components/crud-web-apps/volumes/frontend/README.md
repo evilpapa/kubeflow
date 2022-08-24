@@ -1,27 +1,27 @@
-# Frontend
+# 前端
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+此工程通过 [Angular CLI](https://github.com/angular/angular-cli) 8.3.20 版本生成。
 
-## Development server
+## 开发服务器
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+运行 `ng serve` 开发服务器。导航到 `http://localhost:4200/`。如果源文件有任何更改，应用都会重新加载。
 
-## Code scaffolding
+## 规范脚手架
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+运行 `ng generate component component-name` 生成新的组件。可使用 `ng generate directive|pipe|service|class|guard|interface|enum|module`。
 
-## Build
+## 构建
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+执行 `ng build` 构建工程。构建存储在 `dist/` 目录。使用 `--prod` 标识构建生产环境。
 
-## Running unit tests
+## 运行单元测试
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+执行 `ng test` 通过 [Karma](https://karma-runner.github.io) 运行单元测试。
 
-## Running end-to-end tests
+## 运行点对点测试
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+执行 `ng e2e` 通过 [Protractor](http://www.protractortest.org/) 运行点对点测试。
 
-## Further help
+## 进一步帮助
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI documents](https://angular.io/cli).
+通过 `ng help` 或者查看 [Angular CLI 文档](https://angular.io/cli) 获取更多 Argular CLI 帮助。

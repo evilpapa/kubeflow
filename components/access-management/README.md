@@ -1,52 +1,51 @@
-# Kubeflow Access Management API
+# Kubeflow 接入管理 API
 
-Kubeflow Access Management API provides fine-grain user-namespace level access control.
-The goal is to support multi-tenancy kubeflow cluster / services.
+Kubeflow 接入管理 API 提供了用户空间等级接入控制细粒度。
+目标是支持多租户 kubeflow 集群 / 服务。
 
-## Resources under management
+## 管理中的资源
 
-### Profile
-- Profile contains owner which refers to a k8s user.
-- Profile will create a namespace with same name and make profile owner the namespace owner.
-- Profile will create necessary k8s resources to enable owner access to kubeflow services under multi-tenancy mode.
-- After the namespace is created, the owner can grant access to additional users or groups using the API or by creating RBAC roles & bindings directly.
-- Delete profile will delete namespace and other k8s resources owned by this profile.
+### 配置 Profile
+- Profile 包含指向k8s用户的所有者。
+- Profile 将创建一个同名的命名空间，并使配置文件所有者成为命名空间所有者。
+- Profile 将创建必要的k8s资源，使所有者能够在多租户模式下访问kubeflow服务。
+- 创建名称空间后，所有者可以使用API或直接创建RBAC角色和绑定来授予其他用户或组访问权限。
+- 删除 Profile 将删除此配置文件拥有的命名空间和其他k8s资源。
 
-### Binding
-- Binding contains a user-namespace pair.
-- Binding will give user edit access to referred namespace.
-- Delete binding will revoke user's access in binding.
+### 绑定 Binding
+- Binding 包含一个用户-空间对。
+- Binding 将允许用户对引用的命名空间进行编辑访问。
+- 删除 binding 将撤消用户在绑定中的访问权限。
 
 
-## Use Cases
-#### Case 1: Self serve Kubeflow
+## 用例
+#### 用例 1: Kubeflow 自助
 
-A Kubeflow admin would like to grant a set of users the ability to create/delete a namespace in which they can consume Kubeflow. 
-The resulting namespace should only be accessible to the user who created it; or people they grant access to.
-RBAC doesn't directly support this. So we provide a service on top of RBAC which will enforce this based on the user's identity
+Kubeflow 管理员希望授予一组用户创建/删除可以在其中使用 Kubeflow 的命名空间的能力。生成的命名空间应该只能由创建它的用户访问；或他们授予访问权限的人。
+RBAC 不直接支持这一点。因此，我们在 RBAC 之上提供了一项服务，该服务将根据用户的身份强制执行此操作
 
-#### Case 2: Allow user to update / share resources they own.
+#### 用例 2: 允许用户升级 / 分享资源
 
-We will not grant user permission to edit cluster-scoped CRD resources. Then to enable user editting their own resources,
-we provide update / share / delete APIs and perform permission check on every coming request.  
+我们不会授予用户编辑集群范围 CRD 资源的权限。然后，为了使用户能够编辑自己的资源，
+我们提供了更新/共享/删除 API，并对每个即将到来的请求进行权限检查。
 
 ## APIs
 
 #####`/v1/profiles`
-* `create`: create new profile; 
-  * called when new user self-register.
+* `create`: 创建新 profile 
+  * 新用户自助注册时调用。
 
 #####`/v1/profiles/{profile}`
-* `delete`: delete profile; 
-  * called when admin or owner delete profile / namespace.
+* `delete`: 删除个人资料；
+  * 当管理员或所有者删除配置文件/命名空间时调用。
 
 #####`/v1/bindings`
-* `create`: create new binding; 
-  * called when admin or owner share namespace access with other users.
-* `get`: get bindings; 
-  * called when query for binding status.
-  * filter by user=... | namespace=... | role=owner/editor to query permissions related to a user / namespace.
-  * For example filter by "user=abc@def.com" when need to list namespaces for user "abc@def.com"; called when need to list namespaces for an user (list namespaces on notebook spawner for current user)
-  * For example filter by "namespace=abc" when need to list users of a namespace "abc"; called when need to list users of namespace "abc".
-* `delete`: delete binding; 
-  * called when admin or owner revoke namespace access.
+* `create`: 创建新的绑定；
+  * 当管理员或所有者与其他用户共享命名空间访问权限时调用。
+* `get`: 获取绑定；
+  * 查询绑定状态时调用。
+  * 按用户过滤 user=... | namespace=... | role=owner/editor 查询与用户/命名空间相关的权限。
+  * 例如，当需要列出用户 "abc@def.com" 的命名空间时使用 "user=abc@def.com" 进行过滤；当需要为用户列出命名空间时调用（在笔记本生成器上为当前用户列出命名空间）
+  * 例如，当需要列出命名空间 "abc" 的用户列表时使用 "namespace=abc" 进行过滤；当需要列出命名空间 "abc" 的用户时调用。
+* `delete`: 删除绑定；
+  * 当管理员或所有者撤销命名空间访问时调用。

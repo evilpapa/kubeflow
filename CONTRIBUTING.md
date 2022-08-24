@@ -1,10 +1,10 @@
-# Kubeflow Contributor Guide
+# Kubeflow 贡献指引
 
-Welcome to the Kubeflow project! We'd love to accept your patches and 
+欢迎来到 Kubeflow 项目！We'd love to accept your patches and 
 contributions to this project. Please read the 
 [contributor's guide in our docs](https://www.kubeflow.org/docs/about/contributing/).
 
-The contributor's guide
+贡献者指引
 
 * shows you where to find the Contributor License Agreement (CLA) that you need 
   to sign,

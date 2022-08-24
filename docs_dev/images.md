@@ -1,19 +1,18 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**目录**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Kubeflow Docker Images](#kubeflow-docker-images)
+- [Kubeflow Docker 镜像](#kubeflow-docker-images)
   - [Continuous Integration](#continuous-integration)
   - [Releases](#releases)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Kubeflow Docker Images
+# Kubeflow Docker 镜像
 
-This page contains information about how Kubeflow builds and maintains
-docker images.
+本页包含如何构建主要 Kubeflow docker 镜像的详细信息。
 
-## Continuous Integration
+## 持续集成
 
 Our prow jobs can be used to build docker images on every pre/postsubmit.
 
@@ -23,7 +22,7 @@ Our test jobs can use gcr.io/kubeflow-ci to publish the images.
 
 This registry is not public.
 
-## Releases
+## 版本
 
 Our releases also publish images using Argo workflows; for more info see [releasing.md](./releasing.md).
 

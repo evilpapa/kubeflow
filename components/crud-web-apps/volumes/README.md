@@ -1,14 +1,14 @@
-# Volumes web app
+# Volumes web 应用
 
-This web app is responsible for allowing the user to manipulate PVCs in their Kubeflow cluster. To achieve this it provides a user friendly way to handle the lifecycle of PVC objects.
+此 Web 应用程序负责允许用户在其 Kubeflow 集群中操作 PVC。 为此，它提供了一种用户友好的方式来处理 PVC 对象的生命周期。
 
-## Development
+## 开发
 
-Requirements:
+要求：
 * node 12.0.0
-* python 3.7
+* python 3.8
 
-### Frontend
+### 前端
 
 ```bash
 # build the common library
@@ -25,45 +25,44 @@ npm link kubeflow
 npm run build:watch
 ```
 
-### Backend
+### 后端
 ```bash
-# create a virtual env and install deps
+# 创建虚拟环境并安装依赖
 # https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 cd component/crud-web-apps/volumes/backend
-python3.7 -m pip install --user virtualenv
-python3.7 -m venv web-apps-dev
+python3.8 -m pip install --user virtualenv
+python3.8 -m venv web-apps-dev
 source web-apps-dev/bin/activate
 
-# install the deps on the activated virtual env
+# 在激活的虚拟环境安装依赖
 make -C backend install-deps
 
-# run the backend
+# 运行后端
 make -C backend run-dev
 ```
 
-### internationalization
-support for non-english languages is only supported in a best effort way.
+### 国际化
+只有尽最大努力才能支持非英语语言。
 
-internationalization(i18n) was implemented using [angular's i18n](https://angular.io/guide/i18n)
-guide and practices, in the frontend. you can use the following methods to
-ensure the text of the app will be localized:
-1. `i18n` attribute in html elements, if the node's text should be translated
-2. `i18n-{attribute}` in an html element, if the element's attribute should be
-   translated
-3. [$localize](https://angular.io/api/localize/init/$localize) to mark text in
-   typescript variables that should be translated
+在前端国际化(i18n) 通过 [angular's i18n](https://angular.io/guide/i18n) 来实现指引和实践。
+您可以使用以下方法确保
+应用程序的文本本地化：
+1. `i18n` 属性，应该翻译节点的文本
+2. `i18n-{attribute}` 在html元素中，应该翻译元素的属性
+3. [$localize](https://angular.io/api/localize/init/$localize) 标记应翻译
+   的 typescript 变量文本
 
-the file for the english text is located under `i18n/messages.xlf` and other
-languages under their respective locale folder, i.e. `i18n/fr/messages.fr.xfl`.
-each language's folder, aside from english, should have a distinct and up to
-date owners file that reflects the maintainers of that language.
+英语文本文件放在 `i18n/messages.xlf` 而其他
+语言分别当道对应的目录，如 `i18n/fr/messages.fr.xfl`。
+除英语外，每种语言的文件夹都应该有一个
+不同的、最新的所有者文件，该文件反映了该语言的维护者。
 
-**testing**
+**测试**
 
-you can run a different translation of the app, locally, by running
+您可以通过运行在本地运行应用程序的不同翻译
 ```bash
 ng serve --configuration=fr
 ```
 
-you must also ensure that the backend is running, since angular's dev server
-will be proxying request to the backend at `localhost:5000`.
+您还必须确保后端在运行中，argular 的开发服务器
+通过代理将请求发送到后端 `localhost:5000`。
