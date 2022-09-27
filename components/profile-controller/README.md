@@ -1,38 +1,37 @@
-# Kubeflow Profile
+# Kubeflow 配置文件
 
-Kubeflow Profile CRD is designed to solve access management within multi-user kubernetes cluster.
+Kubeflow Profile CRD 旨在解决多用户 kubernetes 集群内的访问管理。
 
-Profile access management provides namespace level isolation based on:
+配置文件访问管理提供命名空间级别的隔离，基于：
 
 - Kubernetes RBAC
-- Istio AuthorizationPolicy
+- Istio 授权策略
 
-**Resources managed by profile CRD:**
+**配置文件 CRD 管理的资源：**
 
-Each profile CRD will manage one namespace (with same name as profile CRD) and
-will have one owner.
-Specifically, each profile CRD will manage following resources:
+每个 profile CRD 将管理一个命名空间（与 profile CRD 同名）并拥有一个所有者。
+具体来说，每个 profile CRD 将管理以下资源：
 
-- Namespace reserved for profile owner.
-- K8s RBAC RoleBinding `namespaceAdmin`: make profile owner the namespace admin, allow access to above namespace via k8s API (kubectl).
-- Istio namespace-scoped ServiceRole `ns-access-istio`: allow access to all services in target namespace via Istio routing.
-- Istio namespace-scoped ServiceRoleBinding `owner-binding-istio`: bind ServiceRole `ns-access-istio` to profile owner.
-So profile owner can access services in above namespace via Istio (browser).
-- Setup namespace-scoped service-accounts `editor` and `viewer` to be used by user-created pods in above namespace.
-- Resource Quota (since v1beta1)
-- Custom Plugins (since v1beta1)
+- 为 profile 所有者保留的命名空间。
+- K8s RBAC RoleBinding `namespaceAdmin`: 使 profile 所有者成为命名空间管理员，允许通过 k8s API (kubectl) 访问上述命名空间。
+- Istio 命名空间范围的 ServiceRole `ns-access-istio`: 允许通过 Istio 路由访问目标命名空间中的所有服务。
+- Istio 命名空间范围的 ServiceRoleBinding `owner-binding-istio`: 将 ServiceRole `ns-access-istio` 绑定到 profile 所有者。
+因此 profile 所有者可以通过 Istio（浏览器）访问上述命名空间中的服务。
+- 设置命名空间范围内的服务帐户 `editor` 和 `viewer` 供用户在上述命名空间中创建的 pod 使用。
+- 资源配额 (自 v1beta1 起)
+- 自定义插件 (自 v1beta1 起)
 
-## Supported platforms and prerequisites
+## 支持的平台和先决条件
 
 **GCP**
-- All users should have IAM permission `Kubernetes Engine Cluster Viewer`
+- 所有用户应该有 IAM 权限 `Kubernetes Engine Cluster Viewer`
   - This is needed in order to get cluster access by `gcloud container clusters get-credentials`
-- kubeflow cluster with version v0.6.2+
-- kubeflow cluster ingress is setup with GCP IAP
+- kubeflow 集群版本在 v0.6.2+
+- kubeflow 集群入口设置为 GCP IAP
 
-## Manage access control and resources
+## 接入控制和资源管理
 
-**[Detailed document for Kubeflow Multi-Tenancy](https://www.kubeflow.org/docs/other-guides/multi-user-overview/)**
+**[Kubeflow 多租户详细文档](https://www.kubeflow.org/docs/other-guides/multi-user-overview/)**
 
 ### manual access management by admin
 
@@ -52,7 +51,7 @@ kubectl delete profile kubeflow-user1
 
 ### Self-serve kfam UI
 
-Users with access to cluster API server should be able to register and use kubeflow cluster without admin manual approve.
+用户不用注册即可接入集群 API server，并可不用管理员批准就能使用 kubeflow 集群。
 
 
 ## Profile v1beta1:
