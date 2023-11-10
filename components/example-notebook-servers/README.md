@@ -1,11 +1,11 @@
-# Example Notebook Servers
+# Notebook Servers 示例
 
 > 🛑️️ Images are provided as __examples__ and are supported on a best-effort basis.
 > Contributions are greatly appreciated.
 
-## Images
+## 镜像
 
-### Images // Base
+### 镜像 // 基础镜像
 
 These images provide a common starting point for Kubeflow Notebook containers.
 See the [custom images guide](#custom-images) to learn how to extend them with your own packages.
@@ -17,7 +17,7 @@ Dockerfile | Registry | Notes
 [./jupyter](./jupyter) | [`public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter:{TAG}`](https://gallery.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter) | base [JupyterLab](https://github.com/jupyterlab/jupyterlab) image
 [./rstudio](./rstudio) | [`public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/rstudio:{TAG}`](https://gallery.ecr.aws/j1r0q0g6/notebooks/notebook-servers/rstudio) | base [RStudio](https://github.com/rstudio/rstudio) image
 
-### Images // Full
+### 镜像 // 全
 
 These images extend the [base images](#images--base) with common packages used in the real world.
 
@@ -49,14 +49,14 @@ This chart shows how the images are related to each other.
 
 ---
 
-## Custom Images
+## 自定义镜像
 
 Packages installed by users __after spawning__ a Kubeflow Notebook will only last the lifetime of the pod (unless installed into a PVC-backed directory).
 To ensure packages are preserved throughout Pod restarts users will need to either:
 1. Build custom images that include them, or
 2. Ensure they are installed in a PVC-backed directory
 
-### Custom Images // Python Packages
+### 自定义镜像 // Python 包
 
 > ⚠️ a common cause of errors is users running `pip install --user ...`, causing the home-directory (which is backed by a PVC) to contain a different or incompatible version of a package contained in  `/opt/conda/...`
 
@@ -65,13 +65,13 @@ Extend one of the base images and install any `pip` or `conda` packages your Kub
 As a guide, look at [jupyter-pytorch-full.cpu](./jupyter-pytorch-full/cpu.Dockerfile) for a `pip install ...` example, and the [rstudio-tidyverse](./rstudio-tidyverse/Dockerfile) for `conda install ...`.
 
 
-### Custom Images // Linux Packages
+### 自定义镜像 // Linux 包
 
 > ⚠️ ensure you swap to `root` in the Dockerfile before running `apt-get`, and swap back to `jovyan` after.
 
 Extend one of the base images and install any `apt-get` packages your Kubeflow Notebook users are likely to need.
 
-### Custom Images // S6
+### 自定义镜像 // S6
 
 Some use-cases might require custom scripts to run during the startup of the Notebook Server container, or advanced users might want to add additional services that run inside the container (for example, an Apache or NGINX web server).
 To make this easy, we use the [s6-overlay](https://github.com/just-containers/s6-overlay).
@@ -79,7 +79,7 @@ To make this easy, we use the [s6-overlay](https://github.com/just-containers/s6
 The [s6-overlay](https://github.com/just-containers/s6-overlay) differs from other init systems like [tini](https://github.com/krallin/tini).
 While `tini` was created to handle a single process running in a container as PID 1, the `s6-overlay` is built to manage multiple processes and allows the creator of the image to determine which process failures should silently restart, and which should cause the container to exit.
 
-#### Custom Images // S6 // Scripts
+#### 自定义镜像 // S6 // Scripts
 
 Scripts that need to run during the startup of the container can be placed in `/etc/cont-init.d/`, and are executed in ascending alphanumeric order.
 
@@ -87,7 +87,7 @@ An example of a startup script can be found in [./rstudio/s6/cont-init.d/02-rstu
 This script uses the [with-contenv](https://github.com/just-containers/s6-overlay#container-environment) helper so that environment variables (passed to container) are available in the script.
 The purpose of this script is to snapshot any `KUBERNETES_*` environment variables into the `Renviron.site` at pod startup, as without these variables `kubectl` does not work.
 
-#### Custom Images // S6 // Services
+#### 自定义镜像 // S6 // Services
 
 Extra services to be monitored by `s6-overlay` should be placed in their own folder under `/etc/services.d/` containing a script called `run` and optionally a finishing script `finish`.
 

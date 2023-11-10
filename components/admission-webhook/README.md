@@ -1,19 +1,19 @@
 ## 目标
-We need a way to inject common data (env vars, volumes) to pods (e.g. notebooks).
-See [issue](https://github.com/kubeflow/kubeflow/issues/2641).
-K8s has [PodPreset](https://v1-19.docs.kubernetes.io/docs/concepts/workloads/pods/podpreset/) resource with similar use-case, however it is in alpha. 
-K8s [admission-controller](https://godoc.org/k8s.io/api/admissionregistration/v1beta1#MutatingWebhookConfiguration) and CRD can be used to implement PodPreset as done in [here](https://github.com/jpeeler/podpreset-crd).
-We borrowed this PodPreset implementation, customize it for Kubeflow and rename it to PodDefault to avoid confusion.  
-The code is not directly used as Kubeflow's use case for PodDefault controller is slightly different. 
-In fact, PodDefault in Kubeflow is defined as CRD without the  custom controller (as opposed to [here](https://github.com/jpeeler/podpreset-crd)).
+我们需要一种方法来注入通用数据 (env vars, volumes) 到 pod (比如 notebooks)中。
+参见 [讨论](https://github.com/kubeflow/kubeflow/issues/2641).
+K8s 有 [PodPreset](https://v1-19.docs.kubernetes.io/docs/concepts/workloads/pods/podpreset/) 类似用例的资源，然而它还处在 alpha 阶段。
+K8s [admission-controller](https://godoc.org/k8s.io/api/admissionregistration/v1beta1#MutatingWebhookConfiguration) 和 CRD 可用于实现 PodPreset，如[此处所示](https://github.com/jpeeler/podpreset-crd)。
+我们借用了这个 PodPreset 实现，为 Kubeflow 进行了定制，并将其重命名为 PodDefault 以避免混淆。
+该代码未直接使用，因为 Kubeflow 的 PodDefault 控制器用例略有不同。
+事实上，Kubeflow 中的 PodDefault 被定义为没有自定义控制器的 CRD (相对于[此](https://github.com/jpeeler/podpreset-crd))。
 
-## How this works
-Here is the workflow on how this is used in Kubeflow:
+## 如何工作
+以下是在 Kubeflow 中如何使用它的工作流程：
 
-1. Users create  PodDefault manifests which describe additional runtime requirements (i.e., volume, volumeMounts, environment variables) to be injected  into a Pod at creation time.
-PodDefaults use label selectors to specify the Pods to which a given PodDefault applies.
-PodDefaults are namespace scope, i.e., they can be applied/viewed in the namespace.  
-As an example, the following manifest declares a `PodDefault` in the `kubeflow` namespace to add the secret ```gcp-secret``` in to pods in the given namespace. 
+1. 用户创建 PodDefault 货单，它描述了额外的运行时要求 (如 volume, volumeMounts, 环境变量) 要在 Pod 创建时进行注入。
+PodDefaults 使用标签选择器（label selectors）来指定那些应用了 PodDefault 的 Pod。
+PodDefaults 是命名空间范围的，例如，它们能在命名空间内被应用/查看。
+作为示例，以下货单声明了在 `kubeflow` 空间内声明了一个 `PodDefault` 来添加密钥 ```gcp-secret``` 到指定空间的 Pod 中。
 
 ```
 apiVersion: "kubeflow.org/v1alpha1"
@@ -34,22 +34,22 @@ spec:
    secret:
     secretName: gcp-secret
 ```
-1.  Kubeflow components, which are in charge of creating pods (e.g., notebook controller) add some of available PodDefault labels to the pods when required.
-For Jupyter notebooks, for instance, Notebook UI asks users which PodDefault needs to be applied to the notebook pods (see [this issue](https://github.com/kubeflow/kubeflow/issues/2992)). 
-Notebook-controller, then, adds the corresponding PodDefault labels to Notebook pods.  
+1.  Kubeflow 组件，负责(如, notebook 控制器)创建 pod 在需要时向 Pod 添加一些可用的 PodDefault 标签。
+针对 Jupyter notebooks，例如，Notebook UI 询问用户哪些 PodDefault 需要应用到 notebook pods (参看[讨论](https://github.com/kubeflow/kubeflow/issues/2992))。
+Notebook-controller 之后会将相应的 PodDefault 标签添加到 Notebook Pod。
 
 
-1. [Admission webhook controller](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)
-in general, intercepts requests to the Kubernetes API server, and can modify and/or validate the requests.
-Here the  admission webhook is implemented to  modify pods based on the available PodDefaults.
-When a pod creation request is received, the admission webhook looks up the available PodDefaults which match the pod's label.
-It then, mutates the Pod spec according to PodDefault's spec.
-For the above PodDefault, when a pod creation request comes which has the label `add-gcp-secret:"true"', it appends the volume and volumeMounts 
-to the pod as described in the PodDefault spec.
+1. 通常 [Admission webhook 控制器](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)，
+拦截去往 Kubernetes API server 的请求，并可以修改，或者验证请求。
+这里实现了admission webhook来根据可用的 PodDefaults 修改pod。
+当收到 Pod 创建请求时，准入 Webhook 会查找与 Pod 标签匹配的可用 PodDefaults。
+然后，它根据 PodDefault 的规范改变 Pod 规范。
+对于上面的 PodDefault，当带有标签 `add-gcp-secret:"true"` 的 pod 创建请求到来时，它会附加卷和volumeMounts
+按照 PodDefault 规范中的描述添加到 pod。
 
 ## Webhook 配置
-Define a [MutatingWebhookConfiguration](https://godoc.org/k8s.io/api/admissionregistration/v1beta1#MutatingWebhookConfiguration),
-for example:
+定义 [MutatingWebhookConfiguration](https://godoc.org/k8s.io/api/admissionregistration/v1beta1#MutatingWebhookConfiguration)，
+示例：
 
 ```
 apiVersion: admissionregistration.k8s.io/v1beta1
@@ -71,14 +71,14 @@ webhooks:
         resources: ["pods"]
 ```
 
-This specifies
-1. When there is a pod being created (see `rules`),
-1. call the webhook service `gcp-cred-webhook.default` at path `/add-cred` (see `clientConfig`)
+这规定
+1. 当 pod 被创建 (查看 `rules`),
+1. 请求 webhook 服务 `gcp-cred-webhook.default` 的 `/add-cred`  路径(查看 `clientConfig`)
 
 
 ### Webhook 实现
-The webhook should be a server that can handle request coming from the configured path (`/add-cred` in the above).
-The request and response types are both [AdmissionReview](https://godoc.org/k8s.io/api/admission/v1beta1#AdmissionReview)
+webhook 是一个处理来自(`/add-cred` 如上)配置路径请求的服务。
+请求和响应类型均未 [AdmissionReview](https://godoc.org/k8s.io/api/admission/v1beta1#AdmissionReview)
 
 ## 参考
 1. [K8S PodPreset](https://v1-19.docs.kubernetes.io/docs/concepts/workloads/pods/podpreset/)
@@ -86,5 +86,5 @@ The request and response types are both [AdmissionReview](https://godoc.org/k8s.
 1. https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/
 1. https://github.com/kubernetes/kubernetes/tree/v1.13.0/test/images/webhook
 1. https://github.com/morvencao/kube-mutating-webhook-tutorial
-1. How to self sign: [link](https://github.com/kubernetes/kubectl/issues/86)
-1. What to put for caBundle: [issue](https://github.com/kubernetes/kubernetes/issues/61171)
+1. 如何自我签名: [链接](https://github.com/kubernetes/kubectl/issues/86)
+1. caBundle 中要放什么: [讨论](https://github.com/kubernetes/kubernetes/issues/61171)

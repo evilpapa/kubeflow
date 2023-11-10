@@ -1,19 +1,18 @@
 # Jupyter web 应用
 
-This web app is responsible for allowing the user to manipulate the Jupyter Notebooks in their Kubeflow cluster. To achieve this it provides a user friendly way to handle the lifecycle of Notebook CRs.
+该 Web 应用程序允许用户在他们的 Kubeflow 集群中操作 Jupyter Notebook。 为了实现这一目标，它提供了一种用户友好的方式来处理 Notebook CR 的生命周期。
 
 ## Image Groups
 
-With the release of Kubeflow 1.3, two types have Notebook Servers have been added
-alongside the familiar JupyterLab:
+随着 Kubeflow 1.3 的发布，除了熟悉的 JupyterLab 之外，还添加了两种类型的笔记本服务器：
 
 - Group 1
 - Group 2
 
-Some extra configurations are applied Notebook Servers belonging to these groups:
+一些额外的配置适用于属于这些组的笔记本服务器：
 
-The annotation `notebooks.kubeflow.org/http-rewrite-uri: /` is added to Notebook
-resources of both groups. This configures Istio to rewrite the URI to `/` on
+`notebooks.kubeflow.org/http-rewrite-uri: /` 注解添加到两个组的 Notebook 资源中。
+This configures Istio to rewrite the URI to `/` on
 the container. This is useful for applications which host their on `/`
 and do not allow you to change the URI subpath easily.
 
@@ -28,9 +27,9 @@ a running Notebook Server, the Index page contains a column that displays
 the icon for each image group. The SVG logos and icons for each group are added
 with a [configmap](./manifests/base/configs/logos-configmap.yaml) to make it easy for users to customize the logos and icons for their environment.
 
-## Development
+## 开发
 
-Requirements:
+要求：
 * node 12.0.0
 * python 3.8
 
@@ -79,24 +78,23 @@ ensure the text of the app will be localized:
 3. [$localize](https://angular.io/api/localize/init/$localize) to mark text in
    TypeScript variables that should be translated
 
-The file for the English text is located under `i18n/messages.xlf` and other
-languages under their respective locale folder, i.e. `i18n/fr/messages.fr.xfl`.
-Each language's folder, aside from English, should have a distinct and up to
+英文文本文件放在 `i18n/messages.xlf` 路径，并且
+其他语言也是放在相对的本地文件夹中，比如 `i18n/fr/messages.fr.xfl`.
+每个语言文件夹，除了Each language's folder, aside from English, should have a distinct and up to
 date OWNERs file that reflects the maintainers of that language.
 
 **测试**
 
-You can run a different translation of the app, locally, by running
+通过命令，你可以在本地运行不同的 app 翻译：
 ```bash
 ng serve --configuration=fr
 ```
 
-You must also ensure that the backend is running, since Angular's dev server
-will be proxying request to the backend at `localhost:5000`.
+同样需确认后端也在运行中，Angular 的开发服务会代理请求倒后端地址 `localhost:5000`。
 
-## E2E Tests
+## E2E 测试
 
-To run the tests locally users will need to:
+要在本地运行测试，你需要：
 ```bash
 # navigate to the frontend and make sure the node modules are installed
 cd frontend
